@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+<!-- Add Job -->
+<div class="w3-center w3-padding-64" id="add-form">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Add A Job</span>
+</div>
+
+<form class="w3-container" action="/jobs" method="POST">
+    <div class="w3-section">
+        <label>Title</label>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="title" required>
+    </div>
+    <div class="w3-section">
+        <label>Description</label>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="description" required>
+    </div>
+    <div class="w3-section">
+        <label>Budget</label>
+        <input class="w3-input w3-border w3-hover-border-black" type="number" style="width:100%;" name="budget" required>
+    </div>
+    <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="contact_email" required>
+    </div>
+    <button type="submit" class="w3-button w3-block w3-black">Add Job</button>
+</form>
+
+</div>
+
+
+<%- include('partials/footer.ejs') %>

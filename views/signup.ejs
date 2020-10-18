@@ -1,0 +1,56 @@
+<%- include('partials/header.ejs') %>
+
+<!-- register -->
+<div class="w3-center w3-padding-64" id="login-form">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Sign Up</span>
+</div>
+
+<div class="w3-section w3-center">
+    <a href="/auth/google"><button type="submit" class="w3-button w3-red"><i class="fa fa-google"></i> Signup With
+            Google</button></a>
+</div>
+<form class="w3-container w3-center w3-padding-16" action="/auth/signup" method="POST">
+    <p>OR</p>
+
+    <% for(let error of errors){ %>
+        <p><b><%= error.msg %></b></p>
+    <% } %> 
+
+    <div class="w3-section">
+        <label>Display Name</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="displayName" required value=<%= typeof displayName != 'undefined' ? displayName : " " %>>
+    </div>
+    <div class="w3-section">
+        <label>Firstname</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="firstname" required value=<%= typeof firstName != 'undefined' ? firstName : " " %>>
+    </div>
+    <div class="w3-section">
+        <label>Lastname</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="lastname" required value=<%= typeof lastName != 'undefined' ? lastName : " " %>>
+    </div>
+    <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="email" required value=<%= typeof email != 'undefined' ? email : " " %>>
+    </div>
+    <div class="w3-section">
+        <label>Password</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" name="password1" type="password" required value=<%= typeof password != 'undefined' ? password : " " %>>
+    </div>
+    <div class="w3-section">
+        <label>Confirm Password</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" name="password2" type="password" required value=<%= typeof password2 != 'undefined' ? password2 : " " %>>
+    </div>
+
+    <button type="submit" class="w3-button w3-black">Login</button>
+</form>
+
+</div>
+
+
+<%- include('partials/footer.ejs') %>

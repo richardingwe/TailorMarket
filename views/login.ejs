@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs') %>
+
+<!-- register -->
+<div class="w3-center w3-padding-64" id="login-form">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Login</span>
+</div>
+
+<div class="w3-section w3-center">
+    <a href="/auth/google"><button type="submit" class="w3-button w3-red"><i class="fa fa-google"></i> Login With Google</button></a>
+</div>
+<form class="w3-container w3-center" action="/auth/login" method="POST" >
+    <p>OR</p>
+    <div class="w3-section w3-center">
+        <label>Email</label>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="email" required>
+    </div>
+    <div class="w3-section w3-center"> 
+        <label>Password</label>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:50%; transform: translateX(50%); text-align: center;" name="password" type="password" required>
+    </div>
+    <!-- <div class="w3-section">
+        <label>Budget</label>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="budget" required>
+    </div>
+    <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="email" required>
+    </div> -->
+    <button type="submit" class="w3-button w3-black">Login</button>
+</form>
+
+</div>
+
+
+<%- include('partials/footer.ejs') %>

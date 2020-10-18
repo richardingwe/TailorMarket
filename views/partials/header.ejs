@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Market</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../../../css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.14.0-web\css\all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body>
+    <!-- Navbar (sit on top) -->
+        <div class="w3-sticky w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+                <a href="/" class="w3-bar-item w3-button w3-wide">TailorMarket</a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="/jobs/add" class="w3-bar-item w3-button"><i class="fa fa-plus"></i> Add Job</a>
+                    <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-search"></i> Search</a>
+                    <% if (name) { %>
+                    <a href="/jobs" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Jobs</a>
+                    <a href="/dashboard" class="w3-bar-item w3-button"> Dashboard</a>
+                    <a href="/auth/logout" class="w3-bar-item w3-button"></i>Logout</a> 
+                    <% } else { %>
+                    <a href="/auth/login" class="w3-bar-item w3-button"></i>Login</a>
+                    <a href="/auth/signup" class="w3-bar-item w3-button"></i>Become A Tailor</a> 
+                    <% } %> 
+                    
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                    onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+            style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+                ×
+            </a>
+            <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Search</a>
+            <a href="/jobs/add" onclick="w3_close()" class="w3-bar-item w3-button">Add Job</a>
+            <% if (name) { %>
+            <a href="/jobs" onclick="w3_close()" class="w3-bar-item w3-button">Jobs</a>
+            <a href="/dashboard" onclick="w3_close()" class="w3-bar-item w3-button">Dashboard</a>
+            <a href="/auth/logout" onclick="w3_close()" class="w3-bar-item w3-button">Logout</a>
+            <% } else { %>
+            <a href="/auth/login" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
+            <a href="/auth/signup" onclick="w3_close()" class="w3-bar-item w3-button">Become A Tailor</a>
+            <% } %>
+        </nav>

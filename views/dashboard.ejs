@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+
+<div class="w3-center w3-padding-64">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">dashboard</span>
+</div>
+
+<div class="w3-container-4 w3-center">
+    <img src="<%=name.image%>" alt="Boss" style="width:10%; background-color: black;" class="w3-circle w3-hover-opacity">
+    <h1><%= name.displayName %></h1>
+</div>
+        <div class="w3-white w3-text-black" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div class="w3-container">
+                <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-black"></i><%= name.title %> </p>
+                <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-black"></i><%= name.location %> </p>
+                <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-black"></i><%= name.email %></p>
+                <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-black"></i><%= name.phoneNumber%></p>
+                <hr>
+            </div>
+            <div class="w3-container w3-center w3-white w3-margin-bottom">
+                <h2 class="w3-text-black">About</h2>
+                <div class="w3-container">
+                    <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span
+                            class="w3-tag w3-teal w3-round">Current</span></h6> -->
+                    <p><b><%= name.about %> </b></p>
+                    <hr>
+                </div>
+            </div>
+            <p><a href="/dashboard/edit/<%= name.id %>"
+                    class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-black w3-hover-opacity-off">Edit Profile</a></p>
+        </div>
+
+
+<%- include('partials/footer.ejs') %>

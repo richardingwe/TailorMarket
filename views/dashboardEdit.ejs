@@ -1,0 +1,76 @@
+<%- include('partials/header.ejs') %>
+<div class="w3-center w3-padding-64" id="login-form">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Edit Dashboard</span>
+</div>
+<form class="w3-container w3-center w3-padding-16" action="/dashboard/edit/<%= name.id %>?_method=PUT" method="POST">
+    <div class="w3-section">
+        <label>Display Name</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="displayName" required value='<%= name.displayName%>'>
+    </div>
+    <div class="w3-section">
+        <label>Company Name</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="companyName" required value='<%= name.companyName%>'>
+    </div>
+    <div class="w3-section">
+        <label>Firstname</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="firstName" required value='<%= name.firstName%>'>
+    </div>
+    <div class="w3-section">
+        <label>Lastname</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="lastName" required value='<%= name.lastName%>'>
+    </div>
+    <div class="w3-section">
+        <label>Title</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="title" required value='<%= name.title%>'>
+    </div>
+    <div class="w3-section">
+        <label>Location</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="location" required value='<%= name.location%>'>
+    </div>
+    <div class="w3-section">
+        <label>Phone Number</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="phoneNumber" required value='<%= name.phoneNumber%>'>
+    </div>
+    <div class="w3-section">
+        <label>About</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="about" required value='<%= name.about%>'>
+    </div>
+    <div class="w3-section">
+        <label>Specialization</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="specialization" required value='<%= name.specialization%>'>
+    </div>
+    <div class="w3-section">
+        <label>Facebook Link</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="facebook" value='<%= name.facebook%>'>
+    </div>
+    <div class="w3-section">
+        <label>Instagram Link</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="instagram" value='<%= name.instagram%>'>
+    </div>
+    <div class="w3-section">
+        <label>Twitter Link</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="twitter" value='<%= name.twitter%>'>
+    </div>
+    <div class="w3-section">
+        <label>Pinterest Link</label>
+        <input class="w3-input w3-border w3-hover-border-black"
+            style="width:50%; transform: translateX(50%); text-align: center;" type="text" name="pinterest" value='<%= name.pinterest%>'>
+    </div>
+    <button type="submit" class="w3-button w3-black">Save Changes</button>
+</form>
+
+</div>
+
+<%- include('partials/footer.ejs') %>
